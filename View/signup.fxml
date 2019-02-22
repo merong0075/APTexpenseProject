@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="410.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+	<children>
+		<HBox alignment="CENTER" layoutX="7.0" layoutY="362.0" prefHeight="40.0" prefWidth="436.0" spacing="60.0">
+			<children>
+				<Button fx:id="signBtnSave" mnemonicParsing="false" text="가입" />
+				<Button fx:id="signBtnClose" mnemonicParsing="false" text="닫기" />
+			</children>
+		</HBox>
+      <GridPane layoutX="91.0" layoutY="86.0" prefHeight="279.0" prefWidth="285.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="170.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="sighTextAddr" promptText="동 수 입력" GridPane.columnIndex="1" />
+            <PasswordField fx:id="sighTextPw" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <PasswordField fx:id="sighTextPw2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="sighTextName" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="sighCmbGender" prefHeight="23.0" prefWidth="171.0" promptText="선택" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="sighTextBirth" promptText="ex)19910424" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="sighTextEmail" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="sighTextPhone" promptText="-제외하고 입력" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label prefHeight="25.0" prefWidth="89.0" text="세대주소(동 수)" />
+						<Label text="패스워드    " GridPane.rowIndex="2" />
+						<Label text="성명         " GridPane.rowIndex="4" />
+						<Label text="성별          " GridPane.rowIndex="5" />
+						<Label text="생년월일    " GridPane.rowIndex="6" />
+						<Label text="e-mail       " GridPane.rowIndex="7" />
+						<Label text="전화번호    " GridPane.rowIndex="8" />
+            <Label text="패스워드 재확인   " GridPane.rowIndex="3" />
+            <Label prefHeight="25.0" prefWidth="89.0" text="세대주소(동 수)" GridPane.rowIndex="1" />
+            <TextField fx:id="sighTextAddr1" promptText="호 수 입력" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="idcheck" layoutX="390.0" layoutY="90.0" mnemonicParsing="false" text="중복확인" />
+      <Button fx:id="pwcheck" layoutX="394.0" layoutY="151.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <HBox alignment="CENTER" layoutX="-6.0" layoutY="-3.0" prefHeight="88.0" prefWidth="460.0">
+         <children>
+            <Label alignment="CENTER" text="회 원  가 입">
+               <font>
+                  <Font name="Batang" size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+	</children>
+</AnchorPane>
