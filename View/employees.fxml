@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="447.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmployeesController">
+	<children>
+		<HBox prefHeight="43.0" prefWidth="900.0" spacing="50.0">
+			<children>
+				<TextField fx:id="empTextSearch" promptText="사원번호 입력" />
+				<Button fx:id="empSearch" mnemonicParsing="false" text="검색" />
+			</children>
+			<padding>
+				<Insets left="80.0" top="20.0" />
+			</padding>
+		</HBox>
+		<HBox alignment="CENTER" layoutX="-3.0" layoutY="380.0" prefHeight="75.0" prefWidth="900.0" spacing="50.0">
+			<children>
+				<Button fx:id="empAdd" mnemonicParsing="false" text="추가" />
+				<Button fx:id="empEdit" mnemonicParsing="false" text="수정" />
+            <Button fx:id="empDel" mnemonicParsing="false" text="삭제" />
+				<Button fx:id="empClose" mnemonicParsing="false" text="닫기" />
+			</children>
+		</HBox>
+		<TableView fx:id="t2TableView" layoutX="14.0" layoutY="68.0" prefHeight="286.0" prefWidth="865.0">
+			<columns>
+				<TableColumn prefWidth="97.0" text="사원번호" />
+				<TableColumn prefWidth="65.0" text="성명" />
+				<TableColumn prefWidth="65.0" text="나이" />
+				<TableColumn prefWidth="65.0" text="부서" />
+				<TableColumn prefWidth="124.0" text="입사일" />
+				<TableColumn prefWidth="73.0" text="직위" />
+				<TableColumn prefWidth="114.0" text="주소" />
+				<TableColumn prefWidth="108.0" text="전화번호" />
+				<TableColumn prefWidth="145.0" text="사진파일" />
+			</columns>
+		</TableView>
+	</children>
+</AnchorPane>
